@@ -57,7 +57,7 @@ userSchema.methods.comparePassword = function (plainPassword, cb) {
     // plainPassword 1234567 == 암호화된 비밀번호 $2b$10$U8wbGKBJBLsFO0txBaQruu.BgMhp9nXNEJxmCarjobiVcaqD.6EFu
     // 암호화된 비밀번호를 복호화할 수 없기때문에 plainPassword를 암호화하여 비교한다.
     bcrypt.compare(plainPassword, this.password, function (err, isMatch) {
-        if (err) return (err),
+        if (err) return (err);
         cb(null, isMatch)
     })
 }
