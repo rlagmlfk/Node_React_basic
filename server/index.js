@@ -41,7 +41,7 @@ app.post('/api/user/register', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
+app.post('/api/user/login', (req, res) => {
     
     // 요청된 이메일을 데이터베이스에서 있는지 찾는다.
 
