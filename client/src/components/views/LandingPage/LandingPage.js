@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import axiox from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Auth from '../../../hoc/auth';
 
 function LandingPage(props) {
 
@@ -34,4 +35,4 @@ function LandingPage(props) {
     );
 }
 
-export default LandingPage;
+export default Auth(LandingPage, null);
